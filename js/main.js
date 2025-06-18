@@ -116,8 +116,11 @@ while (continuarSimulador) {
                 alert("¡Gracias por usar el Gestor de Tareas! ¡Hasta pronto!");
                 console.log("Simulador finalizado por el usuario.");
                 continuarSimulador = false;
-            } else {
+            } else if (confirmacionSalida.toLowerCase() === "no") {
                 alert("¡Genial! Seguimos en el gestor de tareas.");
+            } else {
+                alert("Respuesta no válida. Por favor, responde con 'si' o 'no'.");
+                console.warn(`Respuesta inválida al confirmar salida: "${confirmacionSalida}"`);
             }
     } else {
         alert("Opción no válida. Por favor, selecciona un número del 1 al 4.");
